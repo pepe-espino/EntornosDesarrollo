@@ -6,12 +6,12 @@ import java.util.Map;
 public class MyString {
 	// Método para contar el número de palabras en una cadena
 	public static int contarPalabras(String str) {
-		if (str == null || str.trim().isEmpty()) {
+		if (str == null || str.trim().isEmpty()) {     //Utilizando .trim() quito los espacios de principio y fin por tanto ya no cuenta como palabra los espacios del principio.
 			return 0;
 		}
 		str = str.trim();
 		String[] palabras = str.split("\\s+");
-		return (palabras.length);
+		return (palabras.length); 
 	}
 
 	// Método para contar el número de letras diferentes en una cadena

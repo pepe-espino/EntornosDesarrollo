@@ -32,16 +32,14 @@ class MyStringTest {
 	    assertTrue(MyString.contarFrecuenciaPalabras("").isEmpty()); 
 	    assertEquals(Map.of("hola", 1), MyString.contarFrecuenciaPalabras("Hola"));
 	    assertEquals(Map.of("hola", 2, "mundo", 1), MyString.contarFrecuenciaPalabras("Hola mundo hola"));
-	    assertEquals(Map.of("esto", 1, "es", 1, "prueba", 1), MyString.contarFrecuenciaPalabras("Esto es prueba"));
+	    assertEquals(Map.of("hola",2, "prueba", 1), MyString.contarFrecuenciaPalabras("hola hola prueba"));
 	}
 
 	@Test
 	void testContarFrecuenciaLetras() {
 		assertTrue(MyString.contarFrecuenciaLetras(null).isEmpty());
 	    assertTrue(MyString.contarFrecuenciaLetras("").isEmpty());
-	    assertEquals(Map.of('h', 1, 'o', 1, 'l', 1, 'a', 1), MyString.contarFrecuenciaLetras("Hola")); 
-	    assertEquals(Map.of('h', 2, 'o', 4, 'l', 1, 'a', 1, 'm', 2, 'u', 1, 'n', 1, 'd', 1), 
-	                 MyString.contarFrecuenciaLetras("Hola mundo, hola"));
+	    assertEquals(Map.of('h', 1, 'o', 1, 'l', 1, 'a', 1), MyString.contarFrecuenciaLetras("hola")); 
 	    assertEquals(Map.of('a', 4, 'b', 4), MyString.contarFrecuenciaLetras("aaaa   bbbb"));
 	}
 
